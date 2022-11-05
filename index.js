@@ -23,7 +23,7 @@ require("./src/config/passport");
 
 console.log(exphbs)
 
-app.set("port", process.env.PORT || 5050);
+app.set("port", process.env.PORT || 3000);
 app.set("views", path.join(__dirname, "src", "views"));
 app.engine(
   ".hbs",
