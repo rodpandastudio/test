@@ -1,0 +1,58 @@
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                 <h1 class="m-0">Registro de usuarios</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                {{#each errors}}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{text}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {{/each}}
+                {{>success}}
+            </div>
+        </div>
+    <div class="card card-orange">
+        <div class="card-header">
+            <h3 class="card-title">Formulario de franquicia</h3>
+        </div>
+            <!-- /.card-header -->
+        <div class="card-body">
+            <form action="/api/registrar-nueva-franquicia" method="POST">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <!-- text input -->
+                        <div class="form-group">
+                        <label>Responsable</label>
+                        <input type="text" class="form-control" required name="Responsable"  placeholder="Introduzca el nombre del responsable">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                        <label>Nombre franquicia</label>
+                        <input type="text" class="form-control" required name="Nombre" value="{{Nombre}}" placeholder="Introduzca el nombre de la franquicia">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                        <label>Página web</label>
+                        <input type="text" class="form-control" required name="PaginaWeb" value="{{Cedula}}" placeholder="Introduzca la págagina web">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 text-right">
+                        <button type="submit" class="btn btn-success">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="/js/admin/registrar-franquicia.js"></script>
+

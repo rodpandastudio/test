@@ -1,0 +1,41 @@
+{
+  "name": "thomsonweb",
+  "version": "0.0.1",
+  "description": "Thomson web, shock absorber, strut mount, page, system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development nodemon src/index.js",
+    "start": "cross-env NODE_ENV=production node index.js"
+  },
+  "author": "@elstevenmedina",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.1",
+    "browser-sync": "^2.27.10",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6",
+    "express-session": "^1.17.3",
+    "fs": "0.0.1-security",
+    "helmet": "^6.0.0",
+    "jquery": "^3.6.1",
+    "method-override": "^3.0.0",
+    "mime-types": "^2.1.35",
+    "moment": "^2.29.4",
+    "mongoose": "^6.7.0",
+    "node-cron": "^3.0.2",
+    "node-sass": "^7.0.3",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "sweetalert2": "^11.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

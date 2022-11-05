@@ -1,0 +1,113 @@
+<div class="container-fluid mt-3">
+    <div class="card">
+        <div class="card-header">
+            <h4>Creación de formularios</h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="mb-3"> 
+                        <label for="Titulo">Título del formulario</label>
+                        <input type="text"  name="Titulo" id="Titulo" class="form-control" placeholder="Titulo:">
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <div class="mb-3">
+                        <label for="TituloPagina">Título de página</label>
+                        <input type="text" class="form-control" name="TituloPagina" id="TituloPagina" placeholder="Titulo página:">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div class="mb-3">
+                        <label for="Pagina">Página</label>
+                        <input type="text" name="Pagina" id="Pagina" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="mb-3">
+                        <label for="Descripcion">Descripción de la pagina <span class="text-muted">(Opcional)</span></label>
+                        <textarea name="Descripcion" id="Descripcion" class="form-control" cols="30" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-2">
+                        <label for="Nombre">Nombre del campo</label>
+                        <input type="text" class="form-control" id="Nombre" placeholder="Nombre de campo">
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="mb-2">
+                        <label for="Tipo">Tipo de campo</label>
+                        <select name="Tipo" id="Tipo" class="form-control">
+                            <option value="0">--Seleccione un tipo de campo--</option>
+                            <option value="textarea">Area de texto</option>
+                            <option value="file">Archivo</option>
+                            <option value="checkbox">Casilla de verificación</option>
+                            <option value="email">Correo electronico</option>
+                            <option value="date">Fecha</option>
+                            <option value="number">Numero</option>
+                            <option value="text">Texto</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-5">
+                    <div class="mb-3">
+                        <label for="Opcional">¿Campo opcional?</label>
+                        <select name="Opcional" id="Opcional" class="form-control">
+                            <option value="0">--Seleccione una opción--</option>
+                            <option value="Si">Si</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+                </div>
+ 
+                <div class="col-sm-5">
+                    <div class="mb-3">
+                        <label for="Espacio">Espacio a ocupar</label>
+                        <select name="Espacio" id="Espacio" class="form-control">
+                            <option value="0">--Seleccione una opción--</option>
+                            <option value="1 Columna">1 Columna</option>
+                            <option value="2 Columnas">2 Columna</option>
+                            <option value="3 Columnas">3 Columna</option>
+                            <option value="4 Columnas">4 Columna</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-2 mt-3">
+                    <div class="mb-3">
+                        <button class="btn btn-outline-info mt-3 w-100" id="btnAgregar">Agregar a la lista</button>
+                    </div>
+                </div>
+                <div class="col-sm-12 mt-3">
+                    <div class="table-responsive">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <td>Nombre</td>
+                                    <td>Tipo</td>
+                                    <td>Opcional</td>
+                                    <td>Espacio</td>
+                                    <td>Elliminar</td>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="col-sm-12 text-right">
+                    <button class="btn btn-success" id="btnCrearPagina">Crear página</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="insertarPaginas">
+        
+    </div>
+    <div class="my-2 text-right">
+        <button class="btn btn-primary" id="btnRegistrar">Registrar formulario</button>
+    </div>
+</div>
+<script src="/js/sweetalert2.min.js"></script>
+<script src="/js/admin/registrar-formulario.js"></script>

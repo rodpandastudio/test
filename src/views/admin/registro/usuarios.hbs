@@ -1,0 +1,82 @@
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                 <h1 class="m-0">Registro de usuarios</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="content">
+        <div class="row">
+            <div class="col-sm-12">
+                {{#each errors}}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{text}}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {{/each}}
+                {{>success}}
+            </div>
+        </div>
+    <div class="card card-orange">
+        <div class="card-header">
+            <h3 class="card-title">Formulario de datos</h3>
+        </div>
+            <!-- /.card-header -->
+        <div class="card-body">
+            <form action="/registrar-nuevo-usuario" method="POST">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <!-- text input -->
+                        <div class="form-group">
+                        <label>Nombres</label>
+                        <input type="text" class="form-control" name="Nombres" value="{{Nombres}}"  placeholder="Introduzca los nombres">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                        <label>Apellidos</label>
+                        <input type="text" class="form-control" name="Apellidos" value="{{Apellidos}}" placeholder="Introduzca los apellidos">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group">
+                        <label>Cédula</label>
+                        <input type="number" class="form-control" name="Cedula" value="{{Cedula}}" placeholder="Introduzca la cedula">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                        <label>Correo electronico</label>
+                        <input type="email"  class="form-control" name="email" value="{{email}}" placeholder="Introduzca correo electronico">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                        <label>Confirmar correo electronico</label>
+                        <input type="email" class="form-control" name="emailConfirm" value="{{emailConfirm}}" placeholder="Confirma correo electronico">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                        <label>Contraseña</label>
+                            <input type="password" class="form-control" name="password" value="{{password}}" placeholder="Introduzca contraseña" autocomplete="new-password">
+                            <span class="text-muted">La contraseña debe tener un minimo de 7 caracteres</span>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                        <label>Confirmar contraseña</label>
+                            <input type="password" class="form-control" name="passwordConfirm" value="{{passwordConfirm}}" placeholder="Confirma contraseña">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 text-right">
+                        <button type="submit" class="btn btn-success">Registrar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="/js/admin/registrar-franquicia.js"></script>
